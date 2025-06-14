@@ -58,7 +58,7 @@ public class TitleSceneManager : MonoBehaviour, IPointerClickHandler
     {
         if (!GetPanelActive())
         {
-            SceneManager.LoadScene("CharacterScene");
+            GameSceneManager.GoToScene("CharacterScene");
         }
     }
 }

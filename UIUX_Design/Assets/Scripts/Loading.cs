@@ -17,7 +17,7 @@ public class Loading : MonoBehaviour
     void Start()
     {
         loadingBar.value = 0f;
-        loadTime = Random.Range(3f, 10f);
+        loadTime = Random.Range(3f, 5f);
         StartCoroutine(LoadingRoutine());
         StartCoroutine(AnimateLoadingText());
     }
@@ -54,6 +54,6 @@ public class Loading : MonoBehaviour
 
         isLoading = false;
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(LoadingSceneController.NextSceneName);
     }
 }
